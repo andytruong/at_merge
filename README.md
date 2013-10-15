@@ -2,9 +2,12 @@ This is just an idea, not yet implemented
 
 ### Benefit?
 
-Features should be written in single module, but too many modules is not good for
-Drupal performance. If there's a tool to merge to all to one single module, that
-would be great.
+Features should be written in single module, but too many modules is not good 
+for Drupal performance. If there's a tool to merge to all to one single module, 
+that would be great.
+
+With a wrapper, we have ability to add more magic to other modules (nothing 
+applied yet)
 
 ### Test cases:
 
