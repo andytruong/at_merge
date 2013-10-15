@@ -20,6 +20,8 @@ applied yet)
 - All PHP files are listed in new_module.info
 - If sub-module is available at bootstrap, new_module must be available at 
   bootstrap too
+- if module_x depends on module_y, both module are merged to new module, the
+  dependency is removed.
 
 ### Merge implementation of hook_permission():
 
