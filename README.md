@@ -8,12 +8,15 @@ would be great.
 
 ### Test cases:
 
-- module_invoke_all(), merged_module must be called
-- module_exists('merged_module'), must be return TRUE
-- drupal_get_path('module', 'merged_module'), must return correct path
+- On new-module enabled/disable, insert/delete fake rows in {system}
+  - module_invoke_all(), merged_module must be called
+  - module_exists('merged_module'), must be return TRUE
+  - drupal_get_path('module', 'merged_module'), must return correct path
 - include/include_once/require/require_once(__DIR__) will not break the code
 - Support at_config.module
 - All PHP files are listed in new_module.info
+- If sub-module is available at bootstrap, new_module must be available at 
+  bootstrap too
 
 ### Merge implementation of hook_permission():
 
@@ -28,16 +31,21 @@ function new_module_permission() {
 }
 ````
 
-````yaml
-@file merge.yml
+````ini
+; file merge.yml
 
-modules:
-  - module_x
-  - module_y:
-    patches:
-      - http://path/to/patch/x
-  - module_z
-name: new_module
+name = new_module
+projects[module_x][type] = module
+projects[module_x][version] = 7.x-1.0
+projects[module_y][type] = module
+projects[module_y][type] = 7.x-1.2
+projects[module_y][patch][] = http://path/to/patch/x
+````
+
+Drush command to merge modules
+
+````bash
+drush at-merge
 ````
 
 Structure of merged module:
