@@ -13,6 +13,7 @@ would be great.
 - drupal_get_path('module', 'merged_module'), must return correct path
 - include/include_once/require/require_once(__DIR__) will not break the code
 - Support at_config.module
+- All PHP files are listed in new_module.info
 
 ### Merge implementation of hook_permission():
 
