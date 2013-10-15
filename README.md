@@ -45,13 +45,13 @@ projects[module_y][type] = 7.x-1.2
 projects[module_y][patch][] = http://path/to/patch/x
 ````
 
-Drush command to merge modules
+### Drush command to merge modules
 
 ````bash
 drush at-merge
 ````
 
-Structure of merged module:
+### Structure of merged module:
 
 ````
 /new_module.info
