@@ -1,0 +1,5 @@
+name = Module Y
+description = Just for test
+core = 7.x
+
+dependencies[] = text_x

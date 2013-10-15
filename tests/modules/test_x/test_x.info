@@ -1,0 +1,5 @@
+name = Module X
+description = Just for test
+core = 7.x
+
+files[] = test_x.php

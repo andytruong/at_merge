@@ -11,6 +11,7 @@ applied yet)
 
 ### Test cases:
 
+- Info file of modules are validated
 - On new-module enabled/disable, insert/delete fake rows in {system}
   - module_invoke_all(), merged_module must be called
   - module_exists('merged_module'), must be return TRUE
@@ -61,3 +62,9 @@ drush at-merge
 /includes/new_module.hook.inc
 /merged_modules/module_x/*
 ````
+
+### Issues
+
+- Translation
+- PSR-0
+- Integrate with Update status

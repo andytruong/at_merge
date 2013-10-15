@@ -1,0 +1,13 @@
+<?php
+
+/**
+ * Implements hook_permission()
+ */
+function test_x_permission() {
+  return array(
+    'administer my module' => array(
+      'title' => t('Administer my module'),
+      'description' => t('Perform administration tasks for my module.'),
+    ),
+  );
+}
