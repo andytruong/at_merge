@@ -67,5 +67,5 @@ drush at-merge
 ### Issues
 
 - Translation
-- PSR-0
+- Support at_autload.module
 - Integrate with Update status
