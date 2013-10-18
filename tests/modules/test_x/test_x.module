@@ -11,3 +11,31 @@ function test_x_permission() {
     ),
   );
 }
+
+/**
+ * Get modules that implements Test X API.
+ *
+ * @return array
+ */
+function test_x_get_module_apis($reset = FALSE, $api = 'api') {
+  if ($reset) {
+    $cache = &drupal_static('ctools_plugin_api_info');
+    if (isset($cache['text_x'][$api])) {
+      unset($cache['text_x'][$api]);
+    }
+  }
+
+  ctools_include('plugins');
+  $return = ctools_plugin_api_info('text_x', $api, '1.0', '1.0');
+
+  return $return;
+}
+
+/**
+ * Implements %owner_ctools_plugin_api_hook_name().
+ *
+ * @see  ctools_plugin_api_get_hook()
+ */
+function test_x_ctools_plugin_api_hook_name() {
+  return 'test_x_api';
+}
