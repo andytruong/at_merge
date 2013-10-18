@@ -23,6 +23,7 @@ applied yet)
   bootstrap too
 - if module_x depends on module_y, both module are merged to new module, the
   dependency is removed.
+- CTools Plugin API
 
 ### Merge implementation of hook_permission():
 
@@ -68,4 +69,3 @@ drush at-merge
 - Translation
 - PSR-0
 - Integrate with Update status
-- Ctools plugin API
