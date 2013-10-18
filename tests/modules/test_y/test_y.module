@@ -1,0 +1,11 @@
+<?php
+/**
+ * @file test_y.module
+ */
+ 
+/**
+ * Implements hook_go_api()
+ */
+function test_y_text_x_api() {
+  return array('api' => '1.0');
+}
