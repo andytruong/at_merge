@@ -6,7 +6,7 @@
  *
  * 1. Create tmp sqlite database, it make coding faster.
  * 2. Parse make file, save projects info to db
- * 3. Download the modules, apply patching, save to tmp directory
+ * 3. Download the modules, apply patches, save to tmp directory
  * 4. Make new directories/files: 
  *     new_module/
  *     new_module/modules/
