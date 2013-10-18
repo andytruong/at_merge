@@ -68,3 +68,4 @@ drush at-merge
 - Translation
 - PSR-0
 - Integrate with Update status
+- Ctools plugin API
