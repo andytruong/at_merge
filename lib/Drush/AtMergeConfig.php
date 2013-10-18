@@ -13,4 +13,10 @@ class AtMergeConfig {
    * @var string
    */
   public $new_module_name;
+  
+  /**
+   * Connection string to the temp database. Should be SQLite.
+   * @var string
+   */
+  public $tmp_db_connect;
 }
