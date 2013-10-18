@@ -30,22 +30,20 @@ namespace Drupal\at_merge\Drush;
  */
 class AtMerge {
   /**
-   * Path to make file.
-   * @var string
-   */
-  private $make_file;
-
-  /**
-   * Name of new module
-   * @var string
-   */
-  private $new_module_name;
-
-  /**
    * Flag to know which step the process is running.
    * @var string
    */
   private $current_step;
+
+  /**
+   * AtMergeConfig
+   * @var [type]
+   */
+  private $config;
+
+  public function __construct(AtMergeConfig $config) {
+    $this->config = $config;
+  }
 
   /**
    * Create DB
